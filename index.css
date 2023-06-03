@@ -1,0 +1,86 @@
+body{
+    font-family:Arial;
+    margin:0;
+    padding:0;
+}
+.all{
+    display: block;
+    opacity: 1;
+}
+.all2{
+    display: none;
+    opacity: 0;
+}
+.top{
+    position: relative;
+}
+.top h1{
+    position:absolute;
+    top:30%;
+    font-size:6vw;
+    padding:1vw;
+    color:white;
+}
+.top img{
+
+    width:100vw;
+    height:auto;
+}
+
+.scroll {
+    position: fixed;
+    left:1vw;
+    bottom: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    opacity: 0;
+    transition: all 0.65s;
+    display: block;
+  }
+  .scroll.isActive {
+    opacity: 1;
+    transition: all 0.65s;
+  }
+
+  .button{
+    position: relative;
+    width:20vw;
+    height:7.5vw;
+    margin:0;
+    font-size:2vw;
+    text-align:center;
+    border:1px solid white;
+    display: block;
+    transition:0.5s
+  }
+
+  .button p{
+    position:absolute;
+    top:10%;
+    left:25%;
+    font-size:2vw;
+    transition:0.1s
+}
+.top2 h1{
+    font-size:4vw;
+    padding:1vw;
+    color:black;
+}
+.place h4{
+    margin-left:1vw;
+    margin-bottom:0;
+    padding-left:1vw;
+    font-size:3vw;
+    border-left:1vw solid black;
+}
+.place div{
+    margin-left:1vw;
+    margin-right:1vw;
+}
+.place p{
+    display: inline-block;
+    margin-right:1vw;
+}
