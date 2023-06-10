@@ -1,10 +1,5 @@
 first = 0;
-function start(){
-    size = screen.width;
-    if(size < 760){
-        location.href = "index2.html";
-    }
-}
+
 function load2(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     fetch(url,{

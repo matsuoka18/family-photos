@@ -4,16 +4,34 @@ body {
     padding: 0;
 }
 
-.all {
+.all2 {
     display: block;
     opacity: 1;
 }
 
-.all2 {
+.all {
     display: none;
     opacity: 0;
 }
-
+.all2 img{
+    margin-left:-5vw;
+    margin-top:5vw;
+    width:90vw;
+    height:auto;
+    border-radius:10vw;
+    box-shadow:0 0 10px 2px lightgray;
+}
+.top0{
+    width:100vw;
+    height:150vw;
+}
+.top0 pre{
+    width:100vw;
+    margin-top:5vw;
+    text-align: center;
+font-size:25vw;
+font-weight:600;
+}
 .top {
     position: relative;
 }
@@ -72,7 +90,7 @@ body {
 }
 
 .top2 h1 {
-    font-size: 4vw;
+    font-size: 12vw;
     padding: 1vw;
     margin-bottom:0;
     color: black;
@@ -86,8 +104,8 @@ body {
     margin-bottom: 0vw;
     padding-left: 1vw;
     padding-bottom: 0vw;
-    font-size: 3vw;
-    border-left: 1vw solid black;
+    font-size: 8vw;
+    border-left: 2vw solid black;
     display: inline-block;
     transition: 0.5s;
 }
@@ -146,6 +164,7 @@ body {
     margin-bottom:2vw;
 }
 .place .div {
+    margin-top:5vw;
     margin-left: 1vw;
     margin-right: 1vw;
     background-color: black;
@@ -155,40 +174,12 @@ body {
 .place p {
     display: inline-block;
     margin-right: 1vw;
-    padding-left: 0.5vw;
+    padding-left: 2vw;
     font-weight: 520;
-    font-size: 1vw;
+    font-size: 5vw;
     color: white;
 }
 .middle{
     width:20vw;
     height:5vw;
 }
-.middle:hover{
-    height:20vw;
-}
-.place p:hover{
-font-weight:600;
-font-size:1.1vw;
-}
-.middle:hover .h40{
-    background-color: black;
-    color:white;
-    border-right:1vw solid black;
-    padding-right:1vw;
-}
-.middle:hover .h41{
-    position:relative;
-    left:0;
-    opacity: 1;
-   }
-.middle:hover .h42{
- position:relative;
- left:0;
- opacity: 1;
-}
-.middle:hover .h43{
-    position:relative;
-    left:0;
-    opacity: 1;
-   }
