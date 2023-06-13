@@ -1,4 +1,7 @@
 first = 0;
+wn = 0;
+ws = '';
+dir = 0;
 function start(){
     size = screen.width;
     if(size < 760){
@@ -6,6 +9,11 @@ function start(){
     }
 }
 function load2(){
+    document.getElementById("direction").style.display = "block";
+    document.getElementById("direction").style.opacity = 1;
+    document.getElementById("showname").innerHTML = ws;
+    document.getElementById("showname").style.display = "block";
+    document.getElementById("showname").style.opacity = 1;
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     fetch(url,{
     "method":"GET",
@@ -25,7 +33,7 @@ function load2(){
      document.getElementById("d").remove();
      }
      first = 1;
-     text = "<div id="+"\""+"d"+"\""+"></div>";
+     text = "<div id="+"\""+"d"+"\""+"class="+"\""+"dd"+"\""+"></div>";
      dd.insertAdjacentHTML("beforeend",text);
      for(var a=0;a<last;a++){
         text = "https://matsuoka18.github.io/grandparents/pic/"+jsondata[a]+".jpg";
@@ -34,6 +42,8 @@ function load2(){
         console.log(textdata);
         d.insertAdjacentHTML("beforeend",textdata);
      }
+     dir = 1;
+     
     })
     .catch(error=>{
     console.log("error");
@@ -87,7 +97,16 @@ function p1(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+       ws = "旧松尾邸";
+       setTimeout(load2,2000);
+    }else if(wn == 2){
+
+    }else if(wn == 3){
+
+    }
+
+
 }
 function p2(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -103,7 +122,14 @@ function p2(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "八ヶ岳";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p3(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -119,7 +145,14 @@ function p3(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "西鎌倉幼稚園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p4(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -135,7 +168,14 @@ function p4(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "西鎌倉小学校";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p5(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -151,7 +191,14 @@ function p5(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "新松尾邸";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p6(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -167,7 +214,14 @@ function p6(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "スキー場";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p7(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -183,7 +237,14 @@ function p7(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "ははその森";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p8(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -199,7 +260,14 @@ function p8(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "場所不明";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p9(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -215,7 +283,14 @@ function p9(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "羽田空港";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p10(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -231,7 +306,14 @@ function p10(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "旧旧松尾邸";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p11(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -247,7 +329,14 @@ function p11(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "観泉寺幼稚園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p12(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -263,7 +352,14 @@ function p12(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "井の頭幼稚園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p14(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -279,7 +375,14 @@ function p14(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "結婚式";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p15(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -295,7 +398,14 @@ function p15(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "消防博物館";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p16(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -311,7 +421,14 @@ function p16(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "吉祥寺周辺";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p17(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -327,7 +444,14 @@ function p17(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "東京おもちゃ美術館";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p18(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -343,7 +467,14 @@ function p18(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "トトロの森";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p19(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -359,7 +490,14 @@ function p19(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "祖父母家（父）";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p20(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -375,7 +513,14 @@ function p20(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "祖父母家（母）";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p21(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -391,7 +536,14 @@ function p21(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "駅・車内";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p22(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -407,7 +559,14 @@ function p22(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "浅草など";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p23(){
@@ -424,7 +583,14 @@ function p23(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "東京のプール";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p24(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -440,7 +606,14 @@ function p24(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "鎌倉";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p25(){
@@ -457,7 +630,14 @@ function p25(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "江ノ島";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p26(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -473,7 +653,14 @@ function p26(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "辻堂海浜公園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p27(){
@@ -490,7 +677,14 @@ function p27(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "鎌倉芸術館";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p28(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -506,7 +700,14 @@ function p28(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "動物園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p29(){
@@ -523,7 +724,14 @@ function p29(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "森永辻堂工場";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p30(){
@@ -540,7 +748,14 @@ function p30(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "サッカー";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p31(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -556,7 +771,14 @@ function p31(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "小田原の公園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p32(){
@@ -573,7 +795,14 @@ function p32(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "ディズニー";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 
 function p33(){
@@ -590,7 +819,14 @@ function p33(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "伊豆";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p34(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -606,7 +842,14 @@ function p34(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "東京都美術館・上野動物園";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p35(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -622,7 +865,14 @@ function p35(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "国立科学博物館";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p36(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -638,7 +888,14 @@ function p36(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){ミュージアム
+        ws = "ドラえもんミュージアム";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p37(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -654,7 +911,14 @@ function p37(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "品川アクアパーク";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function p38(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
@@ -670,11 +934,68 @@ function p38(){
 
     }
     fetch(url,params);
-    setTimeout(load2,2000);
+    if(wn == 1){
+        ws = "日産車体";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
+}
+function p39(){
+    url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
+    n = 39;
+    data = [{
+        "text":n
+    }]
+    params = {
+     "method":"post",
+     "mode":"no-cors",
+     "Content-Type":"application/json",
+     "body":JSON.stringify(data)
+
+    }
+    fetch(url,params);
+    if(wn == 1){
+        ws = "ムーミン展";
+        setTimeout(load2,2000);
+     }else if(wn == 2){
+ 
+     }else if(wn == 3){
+ 
+     }
 }
 function place(){
-var da = function(){
-    $(this).css('background-color','red');
-    $('#h41').hover(da)
+    document.getElementById("show").innerHTML = "Place";
+    document.getElementById("show").style.display = "block";
+    document.getElementById("show").style.opacity = 1;
+    document.getElementById("div").style.display = "block";
+    document.getElementById("div").style.opacity = 1;
+    wn = 1;
 }
+let time;
+function loading(dir){
+    if(dir == 1){
+        alert()
+        clearInterval(time)
+    }else{
+        $(".showname").animate({
+            opacity:0
+        },{
+            'duration':1000
+        })
+        $(".showname").animate({
+            opacity:1
+        },{
+            'duration':0
+        })
+        time = setInterval(loading,1000)
+    }
+
+    
+}
+function loadings(){
+    alert()
+    clearInterval(time)
 }

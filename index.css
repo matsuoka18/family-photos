@@ -4,12 +4,12 @@ body {
     padding: 0;
 }
 
-.all {
+.all2 {
     display: block;
     opacity: 1;
 }
 
-.all2 {
+.all {
     display: none;
     opacity: 0;
 }
@@ -77,79 +77,108 @@ body {
     margin-bottom:0;
     color: black;
 }
-
-.h40 {
-    width:10vw;
-    margin-top: 0;
-    margin-left: 1vw;
-    margin-right: 2vw;
-    margin-bottom: 0vw;
-    padding-left: 1vw;
-    padding-bottom: 0vw;
-    font-size: 3vw;
-    border-left: 1vw solid black;
+.middle{
+    position:relative;
     display: inline-block;
-    transition: 0.5s;
+}
+.middle div{
+    width:15vw;
+    margin-top:0;
+    margin-bottom:0;
+    margin-left:1vw;
+    padding-top:0;
+    padding-bottom:0;
+    display: inline-block;
+    border-left:1vw solid black;
+    padding-left:1vw;
+}
+.middle h4{
+    margin-top:0;
+    margin-bottom:0;
+    padding-top:0;
+    padding-bottom:0;
+    font-size:3vw;
+}
+.h40 {
+    transition:0.5s;
 }
 .h41 {
-    width:10vw;
-    margin-top: 0;
-    margin-left: 1vw;
-    margin-right: 2vw;
-    margin-bottom: 0vw;
-    padding-left: 1vw;
-    padding-bottom: 0vw;
-    font-size: 3vw;
-    border-left: 1vw solid black;
-    display: inline-block;
-    left:-30vw;
+    position:absolute;
+   left:0;
+    display: none;
     opacity: 0;
     transition:0.5s;
 }
-
 .h42 {
-    width:10vw;
-    margin-top: 0;
-    margin-left: 1vw;
-    margin-right: 2vw;
-    margin-bottom: 0vw;
-    padding-left: 1vw;
-    font-size: 3vw;
-    border-left: 1vw solid black;
-    display: inline-block;
-    position:relative;
-    left:-30vw;
+    position:absolute;
+    left:0;
+    display: none;
     opacity: 0;
-    transition:0.75s;
+    transition:0.5s;
 }
-
 .h43 {
-    width:10vw;
-    margin-top: 0;
-    margin-left: 1vw;
-    margin-right: 2vw;
-    margin-bottom: 1vw;
-    padding-left: 1vw;
-    font-size: 3vw;
-    border-left: 1vw solid black;
-    display: inline-block;
-    position:relative;
-    left:-30vw;
+    position:absolute;
+    left:0;
+    display: none;
     opacity: 0;
-    transition:1s;
+    transition:0.5s;
 }
+.middle:hover{
+    width:60vw;
 
-.h4s{
-    border-bottom:0.25vw solid black;
+}
+.middle:hover .h40{
+    background-color: black;
+    color:white;
+}
+.middle:hover .h41{
+  position:absolute;
+  left:18vw;
+  display: inline-block;
+  opacity: 1;
+}
+.middle:hover .h42{
+    position:absolute;
+    left:36vw;
+    display: inline-block;
+    opacity: 1;
+  }
+  .middle:hover .h43{
+    position:absolute;
+    left:54vw;
+    display: inline-block;
+    opacity: 1;
+  }
+   .show{
+    margin-top:2vw;
     margin-left:1vw;
+    margin-right: 1vw;
+    padding-top:1vw;
+    padding-left:3vw;
+    padding-bottom:2vw;
+    font-weight:600;
+    font-size:3vw;
+    color:white;
+    background-color:black;
+   }
+   .direction{
+    margin-left:1vw;
+    width:auto;
+    height:15vw;
+   }
+.h4s{
+    width:100vw;
+    border-bottom:0.25vw solid black;
+    
     margin-right:1vw;
     margin-bottom:2vw;
 }
 .place .div {
     margin-left: 1vw;
     margin-right: 1vw;
+    padding-left:2vw;
+    padding-bottom:2vw;
     background-color: black;
-    opacity: 1;
 }
 
 .place p {
@@ -160,35 +189,59 @@ body {
     font-size: 1vw;
     color: white;
 }
-.middle{
-    width:20vw;
-    height:5vw;
-}
-.middle:hover{
-    height:20vw;
-}
+
 .place p:hover{
 font-weight:600;
 font-size:1.1vw;
 }
-.middle:hover .h40{
-    background-color: black;
-    color:white;
-    border-right:1vw solid black;
-    padding-right:1vw;
-}
-.middle:hover .h41{
+
+.direpic{
     position:relative;
-    left:0;
-    opacity: 1;
-   }
-.middle:hover .h42{
- position:relative;
- left:0;
- opacity: 1;
+    width:100vw;
+    height:15vw;
+    
 }
-.middle:hover .h43{
+.dd{
+    width:80vw;
+    margin-left:10vw;
+    margin-right:10vw;
+}
+.d{
     position:relative;
+}
+.d .direction{
+    position: absolute;
     left:0;
-    opacity: 1;
-   }
+    z-index:100;
+}
+.d h1{
+    width:85vw;
+    position:sticky;
+    top:-10vw;
+    font-size:3vw;
+    margin-top:0;
+    padding-left:15vw;
+    padding-top:11vw;
+    font-weight:650;
+    background-color: white;
+    z-index:0;
+    border-bottom:2px solid #DCDDDD	;
+}
+
+/*div show directionの非表示*/
+.div{
+    display: none;
+    opacity: 0r;
+}
+.show{
+    display: none;
+    opacity: 0;
+}
+.direction{
+    display: none;
+    opacity: 0;
+}
+.showname{
+    display: none;
+    opacity: 0;
+}

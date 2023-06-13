@@ -25,12 +25,13 @@
         <div class="place">
             <div class="h4s"></div>
             <div class="middle">
-            <h4  class="h40" id="h40">Search</h4>
-            <div  id="h41" ><h4 class="h41"onclick="place()">Place</h4></div>
-            <div id="h42"><h4 class="h42"  onclick="people()">People</h4></div>
-            <div id="h43"><h4 class="h43"  onclick="eventt()">Event</h4></div>
-        </div>
-            <div class="div">
+            <div class="h40" id="h40"><h4>Search</h4></div>
+            <div  id="h41" class="h41"><h4 onclick="place()">Place</h4></div>
+            <div id="h42"  class="h42"><h4  onclick="people()">People</h4></div>
+            <div id="h43" class="h43"><h4 onclick="eventt()">Event</h4></div>
+            </div>
+             <div class="show" id="show">Place</div>
+            <div class="div" id="div">
             <p onclick="p1()">旧松尾邸</p>
             <p onclick="p2()">八ヶ岳</p>
             <p onclick="p3()">西鎌倉幼稚園</p>
@@ -70,23 +71,25 @@
             <p onclick="p37()">日産車体</p>
             <p onclick="p38()">ムーミン展</p>
         </div>
+
+    </div>
         </div>
     </div>
     <!--input type="number" id="text" value="">
 <button onclick="load()">ロード</button-->
 
-<div class="d"id="dd">
+<div class="d" id="dd">
+    <img class="direction" id="direction"src="direction.jpg">
+    <h1 id="showname" class="showname"></h1>
 
 </div>
 </div>
 <style>
-    .d{
-margin-left:10vw;
-    }
-    img{
-        width:20vw;
-        height:auto;
-    }
+
+img{
+    width:20vw;
+    height:auto;
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> 
 <script src="index.js"></script>
