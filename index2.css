@@ -15,10 +15,11 @@ body {
 }
 .all2 img{
     margin-left:-5vw;
-    margin-top:5vw;
+    margin-top:15vw;
+    margin-bottom:15vw;
     width:90vw;
     height:auto;
-    border-radius:10vw;
+    border-radius:5vw;
     box-shadow:0 0 10px 2px lightgray;
 }
 .top0{
