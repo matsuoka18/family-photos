@@ -41,9 +41,34 @@ function load2(){
         textdata = "<img src="+"\""+text+"\""+">";
         console.log(textdata);
         d.insertAdjacentHTML("beforeend",textdata);
+
+        
+        // 画像のURL
+const imageUrl = text;
+
+// 画像の向きを取得する関数
+async function getImageOrientation(imageUrl) {
+  const image = new Image();
+  image.src = imageUrl;
+
+  await image.decode();
+
+  const orientation = image.width > image.height ? 'landscape' : 'portrait';
+  return orientation;
+}
+
+// 画像の向きを取得して表示する例
+getImageOrientation(imageUrl)
+  .then((orientation) => {
+    console.log('Image orientation:', orientation);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+
+
      }
-     dir = 1;
-     
+     loadings();
     })
     .catch(error=>{
     console.log("error");
@@ -61,7 +86,7 @@ function load(){
      "mode":"no-cors",
      "Content-Type":"application/json",
      "body":JSON.stringify(data)
-
+     
     }
     fetch(url,params);
     setTimeout(load2,2000);
@@ -84,6 +109,7 @@ function next(){
     document.getElementById("all2").style.opacity = 1;
 }
 function p1(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 1;
     data = [{
@@ -109,6 +135,7 @@ function p1(){
 
 }
 function p2(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 2;
     data = [{
@@ -132,6 +159,7 @@ function p2(){
      }
 }
 function p3(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 3;
     data = [{
@@ -155,6 +183,7 @@ function p3(){
      }
 }
 function p4(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 4;
     data = [{
@@ -178,6 +207,7 @@ function p4(){
      }
 }
 function p5(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 5;
     data = [{
@@ -201,6 +231,7 @@ function p5(){
      }
 }
 function p6(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 6;
     data = [{
@@ -224,6 +255,7 @@ function p6(){
      }
 }
 function p7(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 7;
     data = [{
@@ -247,6 +279,7 @@ function p7(){
      }
 }
 function p8(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 8;
     data = [{
@@ -270,6 +303,7 @@ function p8(){
      }
 }
 function p9(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 9;
     data = [{
@@ -293,6 +327,7 @@ function p9(){
      }
 }
 function p10(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 10;
     data = [{
@@ -316,6 +351,7 @@ function p10(){
      }
 }
 function p11(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 11;
     data = [{
@@ -339,6 +375,7 @@ function p11(){
      }
 }
 function p12(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 12;
     data = [{
@@ -362,6 +399,7 @@ function p12(){
      }
 }
 function p14(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 13;
     data = [{
@@ -385,6 +423,7 @@ function p14(){
      }
 }
 function p15(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 14;
     data = [{
@@ -408,6 +447,7 @@ function p15(){
      }
 }
 function p16(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 15;
     data = [{
@@ -431,6 +471,7 @@ function p16(){
      }
 }
 function p17(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 16;
     data = [{
@@ -454,6 +495,7 @@ function p17(){
      }
 }
 function p18(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 17;
     data = [{
@@ -477,6 +519,7 @@ function p18(){
      }
 }
 function p19(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 18;
     data = [{
@@ -500,6 +543,7 @@ function p19(){
      }
 }
 function p20(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 19;
     data = [{
@@ -523,6 +567,7 @@ function p20(){
      }
 }
 function p21(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 20;
     data = [{
@@ -546,6 +591,7 @@ function p21(){
      }
 }
 function p22(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 21;
     data = [{
@@ -570,6 +616,7 @@ function p22(){
 }
 
 function p23(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 22;
     data = [{
@@ -593,6 +640,7 @@ function p23(){
      }
 }
 function p24(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 23;
     data = [{
@@ -617,6 +665,7 @@ function p24(){
 }
 
 function p25(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 24;
     data = [{
@@ -640,6 +689,7 @@ function p25(){
      }
 }
 function p26(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 25;
     data = [{
@@ -664,6 +714,7 @@ function p26(){
 }
 
 function p27(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 26;
     data = [{
@@ -687,6 +738,7 @@ function p27(){
      }
 }
 function p28(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 27;
     data = [{
@@ -711,6 +763,7 @@ function p28(){
 }
 
 function p29(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 28;
     data = [{
@@ -735,6 +788,7 @@ function p29(){
 }
 
 function p30(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 29;
     data = [{
@@ -758,6 +812,7 @@ function p30(){
      }
 }
 function p31(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 30;
     data = [{
@@ -782,6 +837,7 @@ function p31(){
 }
 
 function p32(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 31;
     data = [{
@@ -806,6 +862,7 @@ function p32(){
 }
 
 function p33(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 32;
     data = [{
@@ -829,6 +886,7 @@ function p33(){
      }
 }
 function p34(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 33;
     data = [{
@@ -852,6 +910,7 @@ function p34(){
      }
 }
 function p35(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 35;
     data = [{
@@ -875,6 +934,7 @@ function p35(){
      }
 }
 function p36(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 36;
     data = [{
@@ -898,6 +958,7 @@ function p36(){
      }
 }
 function p37(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 37;
     data = [{
@@ -921,6 +982,7 @@ function p37(){
      }
 }
 function p38(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 38;
     data = [{
@@ -944,6 +1006,7 @@ function p38(){
      }
 }
 function p39(){
+    loading();
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 39;
     data = [{
@@ -974,28 +1037,39 @@ function place(){
     document.getElementById("div").style.opacity = 1;
     wn = 1;
 }
+function people(){
+    document.getElementById("show").innerHTML = "People";
+    document.getElementById("show").style.display = "block";
+    document.getElementById("show").style.opacity = 1;
+    document.getElementById("div").style.display = "block";
+    document.getElementById("div").style.opacity = 1;
+    wn = 2;
+}
+function eventt(){
+    document.getElementById("show").innerHTML = "Event";
+    document.getElementById("show").style.display = "block";
+    document.getElementById("show").style.opacity = 1;
+    document.getElementById("div").style.display = "block";
+    document.getElementById("div").style.opacity = 1;
+    wn = 3;
+}
 let time;
-function loading(dir){
-    if(dir == 1){
-        alert()
-        clearInterval(time)
-    }else{
-        $(".showname").animate({
-            opacity:0
-        },{
-            'duration':1000
-        })
-        $(".showname").animate({
-            opacity:1
-        },{
-            'duration':0
-        })
-        time = setInterval(loading,1000)
+function loading(){
+
+        time = setInterval(function(){
+            $(".direction").animate({
+                opacity:0
+            },{
+                'duration':1000
+            })
+            $(".direction").animate({
+                opacity:1
+            },{
+                'duration':0
+            })
+        },1000)
     }
 
-    
-}
 function loadings(){
-    alert()
     clearInterval(time)
 }
