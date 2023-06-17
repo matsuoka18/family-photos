@@ -260,8 +260,8 @@ function p12(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p14(){
-    url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
+function p13(){
+     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 13;
     data = [{
         "text":n
@@ -275,8 +275,8 @@ function p14(){
     }
     fetch(url,params);
     setTimeout(load2,2000);
-}
-function p15(){
+    }
+function p14(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 14;
     data = [{
@@ -292,7 +292,7 @@ function p15(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p16(){
+function p15(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 15;
     data = [{
@@ -308,7 +308,7 @@ function p16(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p17(){
+function p16(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 16;
     data = [{
@@ -324,7 +324,7 @@ function p17(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p18(){
+function p17(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 17;
     data = [{
@@ -340,7 +340,7 @@ function p18(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p19(){
+function p18(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 18;
     data = [{
@@ -356,7 +356,7 @@ function p19(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p20(){
+function p19(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 19;
     data = [{
@@ -372,7 +372,7 @@ function p20(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p21(){
+function p20(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 20;
     data = [{
@@ -388,9 +388,25 @@ function p21(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p22(){
+function p21(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 21;
+    data = [{
+        "text":n
+    }]
+    params = {
+     "method":"post",
+     "mode":"no-cors",
+     "Content-Type":"application/json",
+     "body":JSON.stringify(data)
+
+    }
+    fetch(url,params);
+    setTimeout(load2,2000);
+}
+function p22(){
+    url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
+    n = 22;
     data = [{
         "text":n
     }]
@@ -407,7 +423,7 @@ function p22(){
 
 function p23(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
-    n = 22;
+    n = 23;
     data = [{
         "text":n
     }]
@@ -423,7 +439,7 @@ function p23(){
 }
 function p24(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
-    n = 23;
+    n = 24;
     data = [{
         "text":n
     }]
@@ -440,7 +456,7 @@ function p24(){
 
 function p25(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
-    n = 24;
+    n = 25;
     data = [{
         "text":n
     }]
@@ -456,7 +472,7 @@ function p25(){
 }
 function p26(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
-    n = 25;
+    n = 26;
     data = [{
         "text":n
     }]
@@ -473,22 +489,6 @@ function p26(){
 
 function p27(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
-    n = 26;
-    data = [{
-        "text":n
-    }]
-    params = {
-     "method":"post",
-     "mode":"no-cors",
-     "Content-Type":"application/json",
-     "body":JSON.stringify(data)
-
-    }
-    fetch(url,params);
-    setTimeout(load2,2000);
-}
-function p28(){
-    url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 27;
     data = [{
         "text":n
@@ -503,8 +503,7 @@ function p28(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-
-function p29(){
+function p28(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 28;
     data = [{
@@ -521,7 +520,7 @@ function p29(){
     setTimeout(load2,2000);
 }
 
-function p30(){
+function p29(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 29;
     data = [{
@@ -537,7 +536,8 @@ function p30(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p31(){
+
+function p30(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 30;
     data = [{
@@ -553,8 +553,7 @@ function p31(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-
-function p32(){
+function p31(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 31;
     data = [{
@@ -571,7 +570,7 @@ function p32(){
     setTimeout(load2,2000);
 }
 
-function p33(){
+function p32(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 32;
     data = [{
@@ -587,9 +586,26 @@ function p33(){
     fetch(url,params);
     setTimeout(load2,2000);
 }
-function p34(){
+
+function p33(){
     url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
     n = 33;
+    data = [{
+        "text":n
+    }]
+    params = {
+     "method":"post",
+     "mode":"no-cors",
+     "Content-Type":"application/json",
+     "body":JSON.stringify(data)
+
+    }
+    fetch(url,params);
+    setTimeout(load2,2000);
+}
+function p34(){
+    url = "https://script.google.com/macros/s/AKfycbzpMEmB0nhtWY1g0af1GQOIbUvm81PD7q4ndHsKD89YzlS05Glr5PLa5fOOkry_PqY/exec";
+    n = 34;
     data = [{
         "text":n
     }]
