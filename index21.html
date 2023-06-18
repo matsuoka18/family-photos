@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<HTML>
+ <head>
+    <meta charset="utf-8">
+    <title>Mochizuki</title>
+</head>
+<body>
+    <h1>Photos</h1>
+    <div class="buttons1">
+        <div class="d1"><h4>search</h4></div>
+        <div class="d2" onclick="pe()"><h4>People</h4></div>
+        <div class="d3" onclick="pl()"><h4>Place</h4></div>
+    </div>
+    <div class="buttons2" id="buttons2">
+                 <h4 id="event"></h4>
+        <div class="peo" id="peo">
+         <p onclick="b1()">ジージ</p>
+         <p onclick="b2()">バーバ</p>
+         </div>
+         <div class="pla" id="pla">
+            <p onclick="b1()">小田原城</p>
+            <p onclick="b2()">家</p>
+            <p onclick="b3()">銀行</p>
+            <p onclick="b4()">左近山</p>
+            <p onclick="b5()">場所不明</p>
+            <p onclick="b6()">こども自然公園</p>
+            <p onclick="b7()">みなとみらい</p>
+            <p onclick="b8()">市川の家</p>
+            <p onclick="b9()">市川の公園</p>
+            <p onclick="b10()">長野</p>
+            <p onclick="b11()">東浜幼稚園</p>
+            <p onclick="b12()">箱根</p>
+            <p onclick="b13()">ズーラシア</p>
+            <p onclick="b14()">結婚式</p>
+            <p onclick="b15()">茨城</p>
+            <p onclick="b16()">山梨</p>
+            <p onclick="b17()">三重</p>
+            <p onclick="b18()">伊豆</p>
+            <p onclick="b19()">観泉寺幼稚園</p>
+            <p onclick="b20()">東京</p>
+            <p onclick="b21()">西鎌倉小学校</p>
+            <p onclick="b22()">江ノ島水族館</p>
+            <p onclick="b23()">上野</p>
+            
+         </div>
+    </div>
+<div class="d" id="d">
+<p id="total"></p>
+</div>
+    <style>
+        body{
+            margin: 0;
+            padding:0;
+            font-family: Arial;
+        }
+        h1{
+            width:100vw;
+            font-size:15vw;
+            border-bottom:1px solid black;
+            margin-bottom:0;
+        }
+        .buttons1{
+            width:25vw;
+            margin-top:5vw;
+            position:relative;
+        }
+        .buttons1 h4{
+            margin:0;
+        }
+        .buttons1 div{
+            width:25vw;
+            display: inline-block;
+            font-size:8vw;
+            margin-top:0;
+            margin-left:1vw;
+            margin-right:1vw;
+        }
+        .d1{
+          transition: 0.5s;
+        }
+        .d2{
+          position:absolute;
+          left:0;
+          top:0;
+          display: none;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        .d3{
+            position:absolute;
+          left:0;
+          top:0;
+          display: none;
+          opacity: 0;
+          transition: 0.5s;
+        }
+        .buttons1:hover .d1{
+            background-color: black;
+            color:white;
+            padding-left:2vw;
+            padding-right:3vw;
+        }
+        .buttons1:hover .d2{
+         position: absolute;
+         left:35vw;
+
+         display: inline-block;
+         opacity: 1;
+        }
+        .buttons1:hover .d3{
+            position: absolute;
+         left:70vw;
+         display: inline-block;
+         opacity: 1;
+        }
+        .buttons2{
+            margin-top: 5vw;
+            margin-left:5vw;
+            width:90vw;
+            border:none;
+        }
+        .buttons2 h4{
+            width:30vw;
+            margin:0;
+            padding-left:5vw;
+            margin-top:2vw;
+            
+            font-size:8vw;
+            background-color: black;
+            color:white;
+            border:none;
+        }        
+        .buttons2 div{
+           margin-left:0vw;
+            background-color: black;
+            border:none;
+        }
+        .buttons2 div p{
+            display: inline-block;
+            font-size:6vw;
+            font-weight:600;
+            margin-left:10vw;
+            margin-right:2vw;
+            padding:3vw;
+            border:none;
+            color:white;
+        }
+        .buttons2 div p:hover{
+          font-size:7vw;
+        }
+        .d{
+            margin-top:15vw;
+        }
+        .d img{
+            width:100vw;
+            height:auto;
+        }
+        .d p{
+            font-size:5vw;
+            font-weight: 600;
+        }
+        .peo{
+            display: none;
+        }
+        .pla{
+            display: none;
+        }
+    </style>
+    <script>
+        function send(){
+            text = document.getElementById("nu").value;
+            alert(text);
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+        }
+        function b1(){
+            if(wi == 0){
+            text = 1;
+            }else{
+                text = 4;
+            }
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+                function b2(){
+                    if(wi == 0){
+            text = 2;
+                    }else{
+                        text= 5;
+                    }
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+
+        function b3(){
+            text= 6;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b4(){
+            text= 7;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b5(){
+            text= 8;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b6(){
+            text= 9;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b7(){
+            text= 10;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b8(){
+            text= 11;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b9(){
+            text= 12;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b10(){
+            text= 13;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b11(){
+            text= 14;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b12(){
+            text= 15;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b13(){
+            text= 16;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b14(){
+            text= 17;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b15(){
+            text= 18;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b16(){
+            text= 19;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b17(){
+            text= 20;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b18(){
+            text= 21;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b19(){
+            text= 22;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b20(){
+            text= 23;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b21(){
+            text= 24;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b22(){
+            text= 25;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        function b23(){
+            text= 26;
+            url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+            data = [{
+                "text":text
+            }]
+            params = {
+                "method":"post",
+                "mode":"no-cors",
+                "Content-Type":"application/json",
+                "body":JSON.stringify(data)
+            }
+            fetch(url,params)
+            setTimeout(laod(),5000);
+        }
+        first = 0;
+        function laod(){
+
+            if(first == 0){
+                setTimeout(function(){
+                    url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+    fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response =>{
+    if(response.ok){
+    return response.json();
+    }
+    })
+    .then(resJson =>{
+    jsondata = resJson;
+     last = jsondata.length;
+     console.log("last:"+last);
+     console.log(jsondata);
+     if(first == 1){
+     document.getElementById("dd").remove();
+     }
+     first = 1;
+     text = "<div id="+"\""+"dd"+"\""+"class="+"\""+"dd"+"\""+"></div>";
+     d.insertAdjacentHTML("beforeend",text);
+     for(var a=0;a<last;a++){
+        text = "My Pictures/"+jsondata[a]+".jpg";
+        console.log(text);
+        textdata = "<img src="+"\""+text+"\""+">";
+        console.log(textdata);
+        dd.insertAdjacentHTML("beforeend",textdata);
+
+        }
+        document.getElementById("total").innerHTML = "Total:"+last;
+        element = buttons2.getBoundingClientRect();
+            botto = element.bottom;
+        scrollTo(0,botto+100);
+    });
+                },2000)
+            }else{
+    url= "https://script.google.com/macros/s/AKfycbyA8TqXz9YPAZesUPkVGixFZwvMCUgmZBgXR8eZkhn2k8AwzpbAbh8wJxZYk9ZG_BHV/exec";
+    fetch(url,{
+    "method":"GET",
+    "mode":"cors"
+    })
+    .then(response =>{
+    if(response.ok){
+    return response.json();
+    }
+    })
+    .then(resJson =>{
+    jsondata = resJson;
+     last = jsondata.length;
+     console.log("last:"+last);
+     console.log(jsondata);
+     if(first == 1){
+     document.getElementById("dd").remove();
+     }
+     first = 1;
+     text = "<div id="+"\""+"dd"+"\""+"class="+"\""+"dd"+"\""+"></div>";
+     d.insertAdjacentHTML("beforeend",text);
+     for(var a=0;a<last;a++){
+        text = "My Pictures/"+jsondata[a]+".jpg";
+        console.log(text);
+        textdata = "<img src="+"\""+text+"\""+">";
+        console.log(textdata);
+        dd.insertAdjacentHTML("beforeend",textdata);
+
+        }
+        document.getElementById("total").innerHTML = "Total:"+last;
+        element = buttons2.getBoundingClientRect();
+            botto = element.bottom;
+        scrollTo(0,botto+100);
+    });
+}
+
+
+}
+wi = 0;
+function pe(){
+document.getElementById("event").innerHTML = "People";
+document.getElementById("peo").style.display = 'block';
+document.getElementById("pla").style.display = 'none';
+wi = 0;
+}
+function pl(){
+    document.getElementById("event").innerHTML = "Place";
+    document.getElementById("pla").style.display = 'block';
+    document.getElementById("peo").style.display = 'none';
+    wi = 1;
+}
+    </script>
+</body>
+</HTML>      
